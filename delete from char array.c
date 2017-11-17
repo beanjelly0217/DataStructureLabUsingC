@@ -9,19 +9,21 @@ int main()
     scanf("%s",& sentence);
     printf("\n");
     printf("Enter the Character to delete : ");
-    scanf("%c",&letter);
-    scanf("%c",&letter);
+    scanf(" %c",&letter);
 
-
-    char temp[100]; int i=0;
+    char temp[100]; int i=0,k=0;
     for( i = 0; sentence[i] != '\0'; i++)
     {
         if(sentence[i] != letter)
         {
-            temp[i]=sentence[i];
-            printf("%c",temp[i]);
+            temp[k]=sentence[i];
+            k++;
         }
     }
+    temp[k]='\0';
+    int m;
+    for(m=0; temp[m]!='\0';m++)
+        printf("%c",temp[m]);
     return 0;
 
 }
