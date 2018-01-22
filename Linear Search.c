@@ -3,7 +3,7 @@
 
 int main()
 {
-	int arr[10], i, num, n, flag=0, pos;
+	int arr[10], i, num, n;
 	printf("Enter the size of array : ");
 	scanf("%d",&n);
 	printf("Enter Array Elements one by one : ");
@@ -17,17 +17,12 @@ int main()
 	{
 		if(arr[i]==num)
 		{
-			flag=1;
-			pos=i+1;
+			printf("%d found at position %d",num,i+1);
 			break;
 		}
 	}
-	if(flag==0)
+	if(n==i)
 	{
 		printf("Number not found..!!");
-	}
-	else
-	{
-		printf("%d found at position %d",num,pos);
 	}
 }
