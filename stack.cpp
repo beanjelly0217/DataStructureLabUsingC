@@ -1,24 +1,25 @@
-#include <iostream>
+#include<stdio.h>
 #include <stack>
 using namespace std;
 
 int main ()
 {
-    stack <string> stack_data; /* Simple enough to create a stack */
+    stack <int> stack_data; /* Simple enough to create a stack */
     if(stack_data.empty())
     {
-        cout<<"Stack is empty"<<endl;
+        printf("Stack is empty\n");
     }
-    cout<<"After Pushing data."<<endl;
-    stack_data.push("Rahim");
-    stack_data.push("Karim");
-    stack_data.push("Sadik");
-    stack_data.push("Tarik");
-    cout << "There are " << stack_data.size () << " data in stack_data." << endl;
-    cout << "The name on the top of the stack_data is : " << stack_data.top() << endl;
+    printf("After Pushing data.\n");
+    stack_data.push(8);
+    printf("%d Pushed into the stack.\n",stack_data.top());
+    stack_data.push(7);
+    printf("%d Pushed into the stack.\n",stack_data.top());
+    stack_data.push(6);
+    printf("%d Pushed into the stack.\n", stack_data.top());
+    printf("There are %d data in stack.\n",stack_data.size ());
+    printf("Data on top of the stack is : %d\n",stack_data.top());
     stack_data.pop();
-    cout << "After Deleting one the top name is now : " << stack_data.top() << endl;
-    cout << "Size of stack now : "<<stack_data.size();
-    cin.get ();//This will avoid the instruction below output
+    printf("After Deleting one top data is now : %d\n" ,stack_data.top());
+    printf("Size of stack is now : %d",stack_data.size());
     return 0;
 }
